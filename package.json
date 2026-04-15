@@ -4,14 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "pg": "^8.20.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaicodehq/book-my-ticket.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chaicodehq/book-my-ticket/issues"
+  },
+  "homepage": "https://github.com/chaicodehq/book-my-ticket#readme"
 }
