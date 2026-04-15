@@ -152,6 +152,13 @@ async function run() {
   try {
     const res = await fetch("/seats");
     const resarray = await res.json();
+    
+    if (!Array.isArray(resarray)) {
+      console.error("Server error or invalid response:", resarray);
+      showToast("Unable to load seats. Is the database connected?", 'error');
+      return;
+    }
+
     const j = resarray.sort((a, b) => a.id - b.id);
     let tr;
     for (let i = 0; i < j.length; i++) {
